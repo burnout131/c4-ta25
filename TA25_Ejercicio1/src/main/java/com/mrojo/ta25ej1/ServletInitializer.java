@@ -1,4 +1,4 @@
-package com.mrojo.ta25;
+package com.mrojo.ta25ej1;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
