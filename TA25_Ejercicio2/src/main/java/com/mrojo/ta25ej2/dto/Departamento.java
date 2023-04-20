@@ -36,7 +36,7 @@ public class Departamento {
 	private int presupuesto;
 
 	@OneToMany
-	@JoinColumn(name = "codigo_empleados")
+	@JoinColumn(name = "id")
 	private List<Empleado> empleado;
 
 	/**
@@ -50,9 +50,10 @@ public class Departamento {
 	 * @param nombre
 	 * @param empleado
 	 */
-	public Departamento(Long id, String nombre) {
+	public Departamento(Long id, String nombre, int presupuesto) {
 		this.id = id;
 		this.nombre = nombre;
+		this.presupuesto = presupuesto;
 	}
 
 	/**

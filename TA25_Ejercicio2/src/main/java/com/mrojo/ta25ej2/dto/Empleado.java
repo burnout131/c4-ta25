@@ -5,8 +5,6 @@ package com.mrojo.ta25ej2.dto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -21,8 +19,7 @@ import jakarta.persistence.Table;
 public class Empleado {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private String dni;
 
 	@Column(name = "nombre")
 	private String nombre;
@@ -41,30 +38,30 @@ public class Empleado {
 	}
 
 	/**
-	 * @param id
+	 * @param dni
 	 * @param nombre
 	 * @param precio
 	 * @param departamento
 	 */
-	public Empleado(Long id, String nombre, String apellidos, Departamento departamento) {
-		this.id = id;
+	public Empleado(String dni, String nombre, String apellidos, Departamento departamento) {
+		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.departamento = departamento;
 	}
 
 	/**
-	 * @return the id
+	 * @return the dni
 	 */
-	public Long getId() {
-		return id;
+	public String getDni() {
+		return dni;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param dni the dni to set
 	 */
-	public void setId(Long id) {
-		this.id = id;
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 	/**
